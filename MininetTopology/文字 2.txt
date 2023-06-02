@@ -1,0 +1,45 @@
+sh ovs-ofctl add-flow s1 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:2
+sh ovs-ofctl add-flow s1 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:3
+sh ovs-ofctl add-flow s1 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:4
+sh ovs-ofctl add-flow s1 in_port=2,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+sh ovs-ofctl add-flow s1 in_port=3,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+sh ovs-ofctl add-flow s1 in_port=4,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+
+sh ovs-ofctl add-flow s2 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:2
+sh ovs-ofctl add-flow s2 in_port=2,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+
+sh ovs-ofctl add-flow s3 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:2
+sh ovs-ofctl add-flow s3 in_port=2,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+
+sh ovs-ofctl add-flow s4 in_port=1,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:2
+sh ovs-ofctl add-flow s4 in_port=2,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:1
+
+sh ovs-ofctl add-flow s5 in_port=2,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:1
+sh ovs-ofctl add-flow s5 in_port=3,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:1
+sh ovs-ofctl add-flow s5 in_port=4,dl_type=0x0800,nw_dst=10.0.0.2,nw_src=10.0.0.1,actions=output:1
+sh ovs-ofctl add-flow s5 in_port=1,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:2
+sh ovs-ofctl add-flow s5 in_port=1,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:3
+sh ovs-ofctl add-flow s5 in_port=1,dl_type=0x0800,nw_dst=10.0.0.1,nw_src=10.0.0.2,actions=output:4
+
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=2,tp_src=1,actions=output:2
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=3,tp_src=1,actions=output:3
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=4,tp_src=1,actions=output:4
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=2,actions=output:1
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=3,actions=output:1
+sh ovs-ofctl add-flow s1 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=4,actions=output:1
+
+sh ovs-ofctl add-flow s2 dl_type=0x0800,nw_proto=17,tp_dst=2,tp_src=1,actions=output:2
+sh ovs-ofctl add-flow s2 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=2,actions=output:1
+
+sh ovs-ofctl add-flow s3 dl_type=0x0800,nw_proto=17,tp_dst=2,tp_src=1,actions=output:2
+sh ovs-ofctl add-flow s3 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=2,actions=output:1
+
+sh ovs-ofctl add-flow s4 dl_type=0x0800,nw_proto=17,tp_dst=2,tp_src=1,actions=output:2
+sh ovs-ofctl add-flow s4 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=2,actions=output:1
+
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=2,actions=output:1
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=3,actions=output:1
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=1,tp_src=4,actions=output:1
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=2,tp_src=1,actions=output:2
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=3,tp_src=1,actions=output:3
+sh ovs-ofctl add-flow s5 dl_type=0x0800,nw_proto=17,tp_dst=4,tp_src=1,actions=output:4
